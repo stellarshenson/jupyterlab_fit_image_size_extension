@@ -126,3 +126,9 @@ dmypy.json
 
 # Yarn cache
 .yarn/
+
+# Test output
+junit.xml
+
+# npm lock file (we use yarn/jlpm)
+package-lock.json
