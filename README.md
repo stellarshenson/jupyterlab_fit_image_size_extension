@@ -9,7 +9,7 @@
 
 Automatically scales images to fit within the view when they exceed container dimensions, while preserving original size for smaller images. Applies to both raster formats (PNG, JPG) and vector formats (SVG).
 
-**Full disclosure:** This extension does exactly one thing. It makes oversized images behave themselves. No more horizontal scrolling, no more squinting at images that decided to assert dominance over your notebook. Small images stay small, big images get politely asked to fit in.
+**Full disclosure:** This extension is mass-produced mediocrity at its finest. It does one thing that probably should have been a default setting. No configuration, no options, no preferences panel - just CSS that your browser was already capable of applying. You're essentially installing a stylesheet. Revolutionary. We're almost ashamed of it. Almost.
 
 ## Features
 
@@ -35,27 +35,6 @@ pip install jupyterlab_fit_image_size_extension
 ```bash
 pip uninstall jupyterlab_fit_image_size_extension
 ```
-
-## Development
-
-```bash
-# Install dependencies
-jlpm install
-
-# Build the extension
-jlpm build
-
-# Development mode with watch
-jlpm watch
-
-# Run tests
-jlpm test
-
-# Lint and format
-jlpm lint
-```
-
-See [RELEASE](RELEASE.md) for packaging instructions.
 
 ## License
 
