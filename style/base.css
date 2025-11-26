@@ -1,5 +1,43 @@
 /*
-    See the JupyterLab Developer Guide for useful CSS Patterns:
+    JupyterLab Fit Image Size Extension
 
-    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+    Automatically scales images to fit within the view when they exceed
+    container dimensions, while preserving original size for smaller images.
+    Applies to both raster images (PNG, JPG) and vector images (SVG).
 */
+
+/* Target images in notebook output areas */
+.jp-OutputArea-output img,
+.jp-RenderedImage img,
+.jp-OutputArea-output svg,
+.jp-RenderedSVG svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Ensure SVG elements also respect container bounds */
+.jp-OutputArea-output svg,
+.jp-RenderedSVG svg {
+  max-height: 100% !important;
+}
+
+/* Handle images in markdown cells */
+.jp-RenderedMarkdown img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Handle HTML output with embedded images */
+.jp-RenderedHTMLCommon img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Handle standalone image viewer (when opening image files directly) */
+.jp-ImageViewer img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  height: auto !important;
+  width: auto !important;
+  object-fit: contain !important;
+}

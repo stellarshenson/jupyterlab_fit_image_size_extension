@@ -1,16 +1,30 @@
 # jupyterlab_fit_image_size_extension
 
-[![Github Actions Status](/workflows/Build/badge.svg)](/actions/workflows/build.yml)
+[![GitHub Actions](https://github.com/stellarshenson/jupyterlab_fit_image_size_extension/actions/workflows/build.yml/badge.svg)](https://github.com/stellarshenson/jupyterlab_fit_image_size_extension/actions/workflows/build.yml)
+[![npm version](https://img.shields.io/npm/v/jupyterlab_fit_image_size_extension.svg)](https://www.npmjs.com/package/jupyterlab_fit_image_size_extension)
+[![PyPI version](https://img.shields.io/pypi/v/jupyterlab-fit-image-size-extension.svg)](https://pypi.org/project/jupyterlab-fit-image-size-extension/)
+[![Total PyPI downloads](https://static.pepy.tech/badge/jupyterlab-fit-image-size-extension)](https://pepy.tech/project/jupyterlab-fit-image-size-extension)
+[![JupyterLab 4](https://img.shields.io/badge/JupyterLab-4-orange.svg)](https://jupyterlab.readthedocs.io/en/stable/)
+[![Brought To You By KOLOMOLO](https://img.shields.io/badge/Brought%20To%20You%20By-KOLOMOLO-00ffff?style=flat)](https://kolomolo.com)
 
-Jupyterlab extension to fit image to view size when image too large, and leave it as-is when smaller. This applies to all raster images (png, jpg etc..) and vector images (svg etc..)
+Automatically scales images to fit within the view when they exceed container dimensions, while preserving original size for smaller images. Applies to both raster formats (PNG, JPG) and vector formats (SVG).
 
-## Requirements
+**Full disclosure:** This extension does exactly one thing. It makes oversized images behave themselves. No more horizontal scrolling, no more squinting at images that decided to assert dominance over your notebook. Small images stay small, big images get politely asked to fit in.
 
-- JupyterLab >= 4.0.0
+## Features
 
-## Install
+- **Automatic image scaling** - Large images are scaled down to fit within view boundaries
+- **Preserves small images** - Images smaller than container remain at original size
+- **Raster format support** - Works with PNG, JPG, GIF, and other raster formats
+- **Vector format support** - SVG images also respect container bounds
+- **Notebook outputs** - Handles images in code cell outputs
+- **Markdown cells** - Images in markdown cells are also scaled
+- **Standalone viewer** - Works when opening image files directly in JupyterLab
+- **Zero configuration** - Just install and forget
 
-To install the extension, execute:
+## Installation
+
+Requires JupyterLab 4.0.0 or higher.
 
 ```bash
 pip install jupyterlab_fit_image_size_extension
@@ -18,87 +32,31 @@ pip install jupyterlab_fit_image_size_extension
 
 ## Uninstall
 
-To remove the extension, execute:
-
 ```bash
 pip uninstall jupyterlab_fit_image_size_extension
 ```
 
-## Contributing
-
-### Development install
-
-Note: You will need NodeJS to build the extension package.
-
-The `jlpm` command is JupyterLab's pinned version of
-[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
-`yarn` or `npm` in lieu of `jlpm` below.
+## Development
 
 ```bash
-# Clone the repo to your local environment
-# Change directory to the jupyterlab_fit_image_size_extension directory
+# Install dependencies
+jlpm install
 
-# Set up a virtual environment and install package in development mode
-python -m venv .venv
-source .venv/bin/activate
-pip install --editable "."
-
-# Link your development version of the extension with JupyterLab
-jupyter labextension develop . --overwrite
-
-# Rebuild extension Typescript source after making changes
-# IMPORTANT: Unlike the steps above which are performed only once, do this step
-# every time you make a change.
+# Build the extension
 jlpm build
-```
 
-You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
-
-```bash
-# Watch the source directory in one terminal, automatically rebuilding when needed
+# Development mode with watch
 jlpm watch
-# Run JupyterLab in another terminal
-jupyter lab
-```
 
-With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
-
-By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
-
-```bash
-jupyter lab build --minimize=False
-```
-
-### Development uninstall
-
-```bash
-pip uninstall jupyterlab_fit_image_size_extension
-```
-
-In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
-command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `jupyterlab_fit_image_size_extension` within that folder.
-
-### Testing the extension
-
-#### Frontend tests
-
-This extension is using [Jest](https://jestjs.io/) for JavaScript code testing.
-
-To execute them, execute:
-
-```sh
-jlpm
+# Run tests
 jlpm test
+
+# Lint and format
+jlpm lint
 ```
 
-#### Integration tests
+See [RELEASE](RELEASE.md) for packaging instructions.
 
-This extension uses [Playwright](https://playwright.dev/docs/intro) for the integration tests (aka user level tests).
-More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
+## License
 
-More information are provided within the [ui-tests](./ui-tests/README.md) README.
-
-### Packaging the extension
-
-See [RELEASE](RELEASE.md)
+BSD-3-Clause
