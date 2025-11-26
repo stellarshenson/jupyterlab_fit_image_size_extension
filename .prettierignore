@@ -1,0 +1,6 @@
+node_modules
+**/node_modules
+**/lib
+**/package.json
+!/package.json
+jupyterlab_fit_image_size_extension
