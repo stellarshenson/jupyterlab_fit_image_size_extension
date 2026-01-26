@@ -7,6 +7,9 @@
 [![JupyterLab 4](https://img.shields.io/badge/JupyterLab-4-orange.svg)](https://jupyterlab.readthedocs.io/en/stable/)
 [![Brought To You By KOLOMOLO](https://img.shields.io/badge/Brought%20To%20You%20By-KOLOMOLO-00ffff?style=flat)](https://kolomolo.com)
 
+> [!TIP]
+> This extension is part of the [stellars_jupyterlab_extensions](https://github.com/stellarshenson/stellars_jupyterlab_extensions) metapackage. Install all Stellars extensions at once: `pip install stellars_jupyterlab_extensions`
+
 Automatically scales images to fit within the view when they exceed container dimensions, while preserving original size for smaller images. Applies to both raster formats (PNG, JPG) and vector formats (SVG).
 
 **Full disclosure:** This extension is mass-produced mediocrity at its finest. It does one thing that probably should have been a default setting. No configuration, no options, no preferences panel - just CSS that your browser was already capable of applying. You're essentially installing a stylesheet. Revolutionary. We're almost ashamed of it. Almost.
