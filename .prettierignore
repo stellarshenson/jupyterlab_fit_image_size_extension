@@ -4,3 +4,7 @@ node_modules
 **/package.json
 !/package.json
 jupyterlab_fit_image_size_extension
+eslint.config.mjs
+.venv
+.claude
+.agents

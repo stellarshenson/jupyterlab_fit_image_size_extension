@@ -27,7 +27,7 @@ Automatically scales images to fit within the view when they exceed container di
 
 ## Installation
 
-Requires JupyterLab 4.0.0 or higher.
+Requires JupyterLab 4.6.0 or higher.
 
 ```bash
 pip install jupyterlab_fit_image_size_extension

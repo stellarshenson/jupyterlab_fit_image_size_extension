@@ -132,3 +132,8 @@ junit.xml
 
 # npm lock file (we use yarn/jlpm)
 package-lock.json
+
+# Run output
+logs/
+tmp/
+.nodeenv/
