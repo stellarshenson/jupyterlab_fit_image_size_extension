@@ -19,7 +19,7 @@ test('should emit an activation console message', async ({ page }) => {
     logs.filter(
       s =>
         s ===
-        'JupyterLab extension jupyterlab_fit_image_size_extension is activated!'
+        'JupyterLab extension @stellarshenson/jupyterlab-fit-image-size-extension is activated!'
     )
   ).toHaveLength(1);
 });

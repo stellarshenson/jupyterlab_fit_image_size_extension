@@ -43,8 +43,8 @@ artifacts = ["jupyterlab_fit_image_size_extension/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"jupyterlab_fit_image_size_extension/labextension" = "share/jupyter/labextensions/jupyterlab_fit_image_size_extension"
-"install.json" = "share/jupyter/labextensions/jupyterlab_fit_image_size_extension/install.json"
+"jupyterlab_fit_image_size_extension/labextension" = "share/jupyter/labextensions/@stellarshenson/jupyterlab-fit-image-size-extension"
+"install.json" = "share/jupyter/labextensions/@stellarshenson/jupyterlab-fit-image-size-extension/install.json"
 
 [tool.hatch.build.hooks.version]
 path = "jupyterlab_fit_image_size_extension/_version.py"

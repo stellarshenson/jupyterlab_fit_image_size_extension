@@ -1,7 +1,7 @@
 {
-  "name": "jupyterlab_fit_image_size_extension-ui-tests",
+  "name": "@stellarshenson/jupyterlab-fit-image-size-extension-ui-tests",
   "version": "1.0.0",
-  "description": "JupyterLab jupyterlab_fit_image_size_extension Integration Tests",
+  "description": "JupyterLab @stellarshenson/jupyterlab-fit-image-size-extension Integration Tests",
   "private": true,
   "scripts": {
     "start": "jupyter lab --config jupyter_server_test_config.py",

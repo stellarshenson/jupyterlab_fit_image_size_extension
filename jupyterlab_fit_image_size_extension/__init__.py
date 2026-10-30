@@ -12,5 +12,5 @@ except ImportError:
 def _jupyter_labextension_paths():
     return [{
         "src": "labextension",
-        "dest": "jupyterlab_fit_image_size_extension"
+        "dest": "@stellarshenson/jupyterlab-fit-image-size-extension"
     }]
