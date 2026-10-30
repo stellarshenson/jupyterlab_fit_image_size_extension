@@ -2,6 +2,16 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## [1.0.6] - 2026-10-30
+
+### Changed
+
+- Upgrade to extension template v4.6.5 and Makefile 1.46
+
+### Fixed
+
+- Take the scoped @stellarshenson/jupyterlab-fit-image-size-extension npm name
+
 ## 1.0.4
 
 - Published to npm and PyPI
