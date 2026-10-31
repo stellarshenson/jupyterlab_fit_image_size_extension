@@ -13,6 +13,6 @@ project_short_description: Jupyterlab extension to fit image to view size when i
     too large, and leave it as-is when smaller. This applies to all raster images
     (png, jpg etc..) and vector images (svg etc..)
 python_name: jupyterlab_fit_image_size_extension
-repository: ''
+repository: https://github.com/stellarshenson/jupyterlab_fit_image_size_extension
 test: true
 
